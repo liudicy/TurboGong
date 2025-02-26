@@ -1,0 +1,2529 @@
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 1 type ZTEG-F660 sn GPON0041C6A8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:1 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 106 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 106 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 156 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 106 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:1 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 2 type ZTEG-F660 sn GPON0041C3E8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:2 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 109 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 109 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 159 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 109 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:2 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 3 type ZTEG-F660 sn GPON0041CFC8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:3 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 110 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 110 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 160 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 110 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:3 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 4 type ZTEG-F660 sn GPON0041BB58  
+!
+configure terminal 
+interface gpon-onu_1/1/1:4 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 113 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 113 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 163 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 113 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:4 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 5 type ZTEG-F660 sn GPON004145A8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:5 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 114 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 114 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 164 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 114 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:5 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 6 type ZTEG-F660 sn GPON00414FA8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:6 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 117 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 117 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 167 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 117 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:6 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 7 type ZTEG-F660 sn GPON0041D208  
+!
+configure terminal 
+interface gpon-onu_1/1/1:7 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 118 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 118 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 168 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 118 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:7 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 8 type ZTEG-F660 sn GPON0041BD28  
+!
+configure terminal 
+interface gpon-onu_1/1/1:8 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 105 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 105 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 155 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 105 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:8 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 9 type ZTEG-F660 sn GPON00415A28  
+!
+configure terminal 
+interface gpon-onu_1/1/1:9 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 103 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 103 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 153 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 103 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:9 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 10 type ZTEG-F660 sn GPON0041C1D8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:10 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 101 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 101 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 151 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 101 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:10 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 11 type ZTEG-F660 sn GPON00413D08  
+!
+configure terminal 
+interface gpon-onu_1/1/1:11 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 121 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 121 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 171 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 121 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:11 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 12 type ZTEG-F660 sn GPON0041C3C8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:12 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 127 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 127 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 177 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 127 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:12 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 13 type ZTEG-F660 sn GPON0041C408  
+!
+configure terminal 
+interface gpon-onu_1/1/1:13 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 128 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 128 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 178 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 128 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:13 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 14 type ZTEG-F660 sn GPON0041D268  
+!
+configure terminal 
+interface gpon-onu_1/1/1:14 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 131 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 131 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 181 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 131 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:14 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 15 type ZTEG-F660 sn GPON0041C7D8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:15 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 237 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 237 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 287 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 237 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:15 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 16 type ZTEG-F660 sn GPON00415098  
+!
+configure terminal 
+interface gpon-onu_1/1/1:16 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 236 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 236 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 286 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 236 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:16 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 17 type ZTEG-F660 sn GPON00415488  
+!
+configure terminal 
+interface gpon-onu_1/1/1:17 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 232 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 232 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 282 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 232 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:17 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 18 type ZTEG-F660 sn GPON0041CD68  
+!
+configure terminal 
+interface gpon-onu_1/1/1:18 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 233 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 233 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 283 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 233 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:18 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 19 type ZTEG-F660 sn GPON00415408  
+!
+configure terminal 
+interface gpon-onu_1/1/1:19 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 230 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 230 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 280 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 230 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:19 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 20 type ZTEG-F660 sn GPON00419A18  
+!
+configure terminal 
+interface gpon-onu_1/1/1:20 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 228 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 228 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 278 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 228 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:20 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 21 type ZTEG-F660 sn GPON00414C58  
+!
+configure terminal 
+interface gpon-onu_1/1/1:21 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 226 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 226 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 276 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 226 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:21 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 22 type ZTEG-F660 sn GPON0041BC28  
+!
+configure terminal 
+interface gpon-onu_1/1/1:22 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 224 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 224 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 274 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 224 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:22 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 23 type ZTEG-F660 sn GPON0041C798  
+!
+configure terminal 
+interface gpon-onu_1/1/1:23 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 223 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 223 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 273 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 223 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:23 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 24 type ZTEG-F660 sn GPON00418F08  
+!
+configure terminal 
+interface gpon-onu_1/1/1:24 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 220 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 220 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 270 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 220 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:24 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 25 type ZTEG-F660 sn GPON00414E38  
+!
+configure terminal 
+interface gpon-onu_1/1/1:25 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 219 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 219 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 269 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 219 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:25 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 26 type ZTEG-F660 sn GPON0041C6B8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:26 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 216 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 216 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 266 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 216 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:26 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 27 type ZTEG-F660 sn GPON0041C6C8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:27 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 215 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 215 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 265 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 215 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:27 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 28 type ZTEG-F660 sn GPON0041C5C8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:28 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 212 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 212 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 262 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 212 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:28 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 29 type ZTEG-F660 sn GPON0041BC88  
+!
+configure terminal 
+interface gpon-onu_1/1/1:29 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 211 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 211 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 261 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 211 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:29 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 30 type ZTEG-F660 sn GPON00418FC8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:30 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 208 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 208 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 258 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 208 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:30 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 31 type ZTEG-F660 sn GPON004141D8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:31 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 206 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 206 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 256 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 206 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:31 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 32 type ZTEG-F660 sn GPON00418FF8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:32 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 205 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 205 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 255 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 205 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:32 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 33 type ZTEG-F660 sn GPON0041B968  
+!
+configure terminal 
+interface gpon-onu_1/1/1:33 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 201 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 201 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 251 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 201 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:33 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 34 type ZTEG-F660 sn GPON00418D48  
+!
+configure terminal 
+interface gpon-onu_1/1/1:34 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 202 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 202 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 252 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 202 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:34 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 35 type ZTEG-F660 sn GPON00414068  
+!
+configure terminal 
+interface gpon-onu_1/1/1:35 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 337 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 337 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 387 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 337 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:35 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 36 type ZTEG-F660 sn GPON00414048  
+!
+configure terminal 
+interface gpon-onu_1/1/1:36 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 336 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 336 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 386 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 336 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:36 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 37 type ZTEG-F660 sn GPON0041CB98  
+!
+configure terminal 
+interface gpon-onu_1/1/1:37 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 332 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 332 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 382 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 332 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:37 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 38 type ZTEG-F660 sn GPON0041C238  
+!
+configure terminal 
+interface gpon-onu_1/1/1:38 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 333 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 333 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 383 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 333 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:38 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 39 type ZTEG-F660 sn GPON00413F28  
+!
+configure terminal 
+interface gpon-onu_1/1/1:39 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 330 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 330 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 380 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 330 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:39 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 40 type ZTEG-F660 sn GPON00418398  
+!
+configure terminal 
+interface gpon-onu_1/1/1:40 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 301 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 301 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 351 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 301 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:40 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 41 type ZTEG-F660 sn GPON004186B8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:41 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 302 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 302 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 352 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 302 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:41 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 42 type ZTEG-F660 sn GPON00418D18  
+!
+configure terminal 
+interface gpon-onu_1/1/1:42 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 305 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 305 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 355 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 305 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:42 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 43 type ZTEG-F660 sn GPON0041C178  
+!
+configure terminal 
+interface gpon-onu_1/1/1:43 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 307 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 307 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 357 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 307 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:43 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 44 type ZTEG-F660 sn GPON00413DE8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:44 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 308 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 308 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 358 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 308 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:44 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 45 type ZTEG-F660 sn GPON0041C978  
+!
+configure terminal 
+interface gpon-onu_1/1/1:45 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 312 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 312 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 362 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 312 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:45 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 46 type ZTEG-F660 sn GPON0041C7E8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:46 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 315 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 315 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 365 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 315 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:46 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 47 type ZTEG-F660 sn GPON0041A548  
+!
+configure terminal 
+interface gpon-onu_1/1/1:47 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 316 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 316 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 366 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 316 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:47 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 48 type ZTEG-F660 sn GPON00413D78  
+!
+configure terminal 
+interface gpon-onu_1/1/1:48 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 319 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 319 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 369 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 319 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:48 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 49 type ZTEG-F660 sn GPON0041B5B8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:49 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 321 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 321 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 371 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 321 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:49 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 50 type ZTEG-F660 sn GPON00418758  
+!
+configure terminal 
+interface gpon-onu_1/1/1:50 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 322 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 322 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 372 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 322 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:50 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 51 type ZTEG-F660 sn GPON00418D28  
+!
+configure terminal 
+interface gpon-onu_1/1/1:51 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 324 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 324 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 374 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 324 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:51 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 52 type ZTEG-F660 sn GPON0041D3F8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:52 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 437 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 437 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 487 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 437 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:52 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 53 type ZTEG-F660 sn GPON0041BA58  
+!
+configure terminal 
+interface gpon-onu_1/1/1:53 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 436 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 436 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 486 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 436 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:53 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 54 type ZTEG-F660 sn GPON0041D438  
+!
+configure terminal 
+interface gpon-onu_1/1/1:54 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 433 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 433 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 483 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 433 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:54 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 55 type ZTEG-F660 sn GPON0041D4A8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:55 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 432 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 432 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 482 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 432 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:55 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 56 type ZTEG-F660 sn GPON0041CDF8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:56 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 429 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 429 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 479 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 429 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:56 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 57 type ZTEG-F660 sn GPON004199E8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:57 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 428 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 428 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 478 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 428 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:57 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 58 type ZTEG-F660 sn GPON0041CE08  
+!
+configure terminal 
+interface gpon-onu_1/1/1:58 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 426 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 426 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 476 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 426 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:58 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 59 type ZTEG-F660 sn GPON0041CDB8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:59 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 424 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 424 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 474 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 424 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:59 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 60 type ZTEG-F660 sn GPON0041CE18  
+!
+configure terminal 
+interface gpon-onu_1/1/1:60 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 420 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 420 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 470 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 420 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:60 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 61 type ZTEG-F660 sn GPON0041B788  
+!
+configure terminal 
+interface gpon-onu_1/1/1:61 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 419 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 419 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 469 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 419 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:61 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 62 type ZTEG-F660 sn GPON0041E358  
+!
+configure terminal 
+interface gpon-onu_1/1/1:62 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 416 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 416 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 466 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 416 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:62 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 63 type ZTEG-F660 sn GPON004178B8  
+!
+configure terminal 
+interface gpon-onu_1/1/1:63 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 415 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 415 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 465 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 415 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:63 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/1
+  onu 64 type ZTEG-F660 sn GPON0041E688  
+!
+configure terminal 
+interface gpon-onu_1/1/1:64 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 412 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 412 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 462 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 412 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/1:64 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 1 type ZTEG-F660 sn GPON0041E888  
+!
+configure terminal 
+interface gpon-onu_1/1/2:1 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 411 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 411 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 461 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 411 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:1 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 2 type ZTEG-F660 sn GPON0041E6D8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:2 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 100 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 100 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 150 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 100 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:2 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 3 type ZTEG-F660 sn GPON0041E578  
+!
+configure terminal 
+interface gpon-onu_1/1/2:3 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 407 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 407 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 457 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 407 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:3 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 4 type ZTEG-F660 sn GPON0041E288  
+!
+configure terminal 
+interface gpon-onu_1/1/2:4 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 405 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 405 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 455 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 405 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:4 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 5 type ZTEG-F660 sn GPON00414A38  
+!
+configure terminal 
+interface gpon-onu_1/1/2:5 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 402 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 402 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 452 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 402 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:5 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 6 type ZTEG-F660 sn GPON0041E668  
+!
+configure terminal 
+interface gpon-onu_1/1/2:6 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 401 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 401 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 451 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 401 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:6 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 7 type ZTEG-F660 sn GPON00416868  
+!
+configure terminal 
+interface gpon-onu_1/1/2:7 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 537 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 537 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 587 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 537 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:7 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 8 type ZTEG-F660 sn GPON00416108  
+!
+configure terminal 
+interface gpon-onu_1/1/2:8 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 536 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 536 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 586 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 536 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:8 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 9 type ZTEG-F660 sn GPON00415FD8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:9 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 533 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 533 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 583 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 533 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:9 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 10 type ZTEG-F660 sn GPON00415988  
+!
+configure terminal 
+interface gpon-onu_1/1/2:10 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 532 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 532 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 582 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 532 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:10 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 11 type ZTEG-F660 sn GPON004159C8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:11 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 530 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 530 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 580 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 530 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:11 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 12 type ZTEG-F660 sn GPON00415DA8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:12 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 528 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 528 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 578 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 528 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:12 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 13 type ZTEG-F660 sn GPON00414928  
+!
+configure terminal 
+interface gpon-onu_1/1/2:13 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 526 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 526 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 576 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 526 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:13 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 14 type ZTEG-F660 sn GPON00415958  
+!
+configure terminal 
+interface gpon-onu_1/1/2:14 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 524 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 524 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 574 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 524 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:14 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 15 type ZTEG-F660 sn GPON00415A48  
+!
+configure terminal 
+interface gpon-onu_1/1/2:15 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 522 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 522 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 572 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 522 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:15 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 16 type ZTEG-F660 sn GPON00415468  
+!
+configure terminal 
+interface gpon-onu_1/1/2:16 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 521 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 521 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 571 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 521 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:16 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 17 type ZTEG-F660 sn GPON0041B998  
+!
+configure terminal 
+interface gpon-onu_1/1/2:17 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 518 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 518 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 568 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 518 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:17 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 18 type ZTEG-F660 sn GPON00415948  
+!
+configure terminal 
+interface gpon-onu_1/1/2:18 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 517 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 517 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 567 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 517 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:18 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 19 type ZTEG-F660 sn GPON00418C78  
+!
+configure terminal 
+interface gpon-onu_1/1/2:19 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 514 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 514 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 564 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 514 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:19 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 20 type ZTEG-F660 sn GPON00414FD8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:20 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 513 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 513 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 563 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 513 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:20 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 21 type ZTEG-F660 sn GPON00419128  
+!
+configure terminal 
+interface gpon-onu_1/1/2:21 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 510 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 510 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 560 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 510 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:21 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 22 type ZTEG-F660 sn GPON00415D08  
+!
+configure terminal 
+interface gpon-onu_1/1/2:22 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 509 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 509 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 559 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 509 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:22 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 23 type ZTEG-F660 sn GPON00415978  
+!
+configure terminal 
+interface gpon-onu_1/1/2:23 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 507 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 507 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 557 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 507 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:23 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 24 type ZTEG-F660 sn GPON0041B9B8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:24 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 505 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 505 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 555 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 505 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:24 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 25 type ZTEG-F660 sn GPON00415F08  
+!
+configure terminal 
+interface gpon-onu_1/1/2:25 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 502 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 502 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 552 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 502 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:25 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 26 type ZTEG-F660 sn GPON00418C58  
+!
+configure terminal 
+interface gpon-onu_1/1/2:26 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 501 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 501 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 551 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 501 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:26 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 27 type ZTEG-F660 sn GPON00415938  
+!
+configure terminal 
+interface gpon-onu_1/1/2:27 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 637 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 637 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 687 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 637 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:27 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 28 type ZTEG-F660 sn GPON00415DE8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:28 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 636 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 636 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 686 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 636 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:28 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 29 type ZTEG-F660 sn GPON00415908  
+!
+configure terminal 
+interface gpon-onu_1/1/2:29 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 633 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 633 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 683 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 633 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:29 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 30 type ZTEG-F660 sn GPON00414678  
+!
+configure terminal 
+interface gpon-onu_1/1/2:30 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 632 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 632 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 682 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 632 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:30 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 31 type ZTEG-F660 sn GPON004144C8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:31 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 630 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 630 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 680 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 630 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:31 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 32 type ZTEG-F660 sn GPON00414178  
+!
+configure terminal 
+interface gpon-onu_1/1/2:32 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 628 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 628 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 678 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 628 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:32 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 33 type ZTEG-F660 sn GPON00414698  
+!
+configure terminal 
+interface gpon-onu_1/1/2:33 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 626 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 626 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 676 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 626 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:33 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 34 type ZTEG-F660 sn GPON004150E8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:34 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 624 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 624 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 674 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 624 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:34 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 35 type ZTEG-F660 sn GPON00414558  
+!
+configure terminal 
+interface gpon-onu_1/1/2:35 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 623 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 623 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 673 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 623 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:35 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 36 type ZTEG-F660 sn GPON00414FB8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:36 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 620 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 620 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 670 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 620 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:36 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 37 type ZTEG-F660 sn GPON00414548  
+!
+configure terminal 
+interface gpon-onu_1/1/2:37 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 619 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 619 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 669 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 619 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:37 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 38 type ZTEG-F660 sn GPON00413FD8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:38 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 617 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 617 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 667 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 617 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:38 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 39 type ZTEG-F660 sn GPON00414BE8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:39 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 615 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 615 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 665 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 615 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:39 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 40 type ZTEG-F660 sn GPON00414708  
+!
+configure terminal 
+interface gpon-onu_1/1/2:40 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 612 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 612 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 662 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 612 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:40 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 41 type ZTEG-F660 sn GPON00414118  
+!
+configure terminal 
+interface gpon-onu_1/1/2:41 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 611 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 611 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 661 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 611 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:41 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 42 type ZTEG-F660 sn GPON00413DB8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:42 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 608 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 608 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 658 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 608 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:42 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 43 type ZTEG-F660 sn GPON00414478  
+!
+configure terminal 
+interface gpon-onu_1/1/2:43 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 607 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 607 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 657 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 607 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:43 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 44 type ZTEG-F660 sn GPON00413FB8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:44 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 605 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 605 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 655 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 605 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:44 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 45 type ZTEG-F660 sn GPON004140C8  
+!
+configure terminal 
+interface gpon-onu_1/1/2:45 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 602 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 602 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 652 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 602 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:45 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
+
+configure terminal 
+interface gpon-olt_1/1/2
+  onu 46 type ZTEG-F660 sn GPON00413D18  
+!
+configure terminal 
+interface gpon-onu_1/1/2:46 
+  tcont 1 name Tl1DefaultCreate  profile FTTH_UPBW
+  gemport 1 name Tl1DefaultCreate  tcont 1
+  gemport 1 traffic-limit downstream FTTH_DOWNBW 
+  service-port 1 vport 1 user-vlan 121 vlan 601 svlan 1142
+  service-port 2 vport 1 user-vlan 122 vlan 601 svlan 1242 
+  service-port 3 vport 1 user-vlan 123 vlan 651 svlan 1242 
+  service-port 4 vport 1 user-vlan 120 vlan 601 svlan 1042
+!
+configure terminal    
+pon-onu-mng gpon-onu_1/1/2:46 
+service Tl1DefaultCreate gemport 1
+vlan port eth_0/1 mode tag vlan 121
+vlan port eth_0/2 mode tag vlan 120
+vlan port wifi_0/1 mode tag vlan 122
+vlan port wifi_0/2 mode tag vlan 123
+!
