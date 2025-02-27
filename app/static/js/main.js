@@ -6,6 +6,26 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
     const error = document.getElementById('error');
     const progress = document.getElementById('progress');
     const timeSpent = document.getElementById('timeSpent');
+    const totalSavedTimeSpan = document.getElementById('totalSavedTime');
+
+    function createConfetti() {
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 4000);
+        }
+    }
+
+    function showSuccessMessage(savedTime) {
+        const message = document.createElement('div');
+        message.className = 'success-message';
+        message.innerHTML = `本次脚本生成又为你节省了 ${savedTime.toFixed(1)} 秒，加油打工人🥳`;
+        document.body.appendChild(message);
+        setTimeout(() => message.remove(), 5000);
+    }
     
     // 重置状态
     status.style.display = 'block';
@@ -58,7 +78,19 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
         });
     })
     .then(stream => new Response(stream))
-    .then(response => response.blob())
+    .then(response => {
+        const savedTime = parseFloat(response.headers.get('X-Saved-Time') || '0');
+        const totalSavedTime = parseFloat(response.headers.get('X-Total-Saved-Time') || '0');
+        
+        // 更新总节省时间显示，确保数值有效
+        totalSavedTimeSpan.textContent = isNaN(totalSavedTime) ? '0.0' : totalSavedTime.toFixed(1);
+        
+        // 显示成功消息和礼花效果
+        createConfetti();
+        showSuccessMessage(isNaN(savedTime) ? 0 : savedTime);
+        
+        return response.blob();
+    })
     .then(blob => {
         const endTime = performance.now();
         const timeElapsed = endTime - startTime;
@@ -71,15 +103,11 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
-        
-        // 保持进度条显示一会儿
-        setTimeout(() => {
-            status.style.display = 'none';
-        }, 2000);
+        a.remove();
     })
     .catch(err => {
-        status.style.display = 'none';
         error.textContent = err.message;
         error.style.display = 'block';
+        status.style.display = 'none';
     });
-}); 
+});

@@ -6,6 +6,9 @@ from app.services.script_generator import ScriptGenerator
 from datetime import datetime, timedelta
 import pandas as pd
 
+# 用于存储总节省时间的变量
+total_saved_time = 0
+
 main = Blueprint('main', __name__)
 
 ALLOWED_EXTENSIONS = {
@@ -86,9 +89,18 @@ def upload_files():
                 download_name='generated_scripts.txt',
                 mimetype='text/plain'
             )
+            # 计算节省时间（每行0.5秒）
+            saved_time = total_rows * 0.5
+            
+            # 更新总节省时间
+            global total_saved_time
+            total_saved_time += saved_time
+            
             # 添加额外的响应头
             response.headers['Content-Type'] = 'text/plain; charset=utf-8'
             response.headers['X-Total-Rows'] = str(total_rows)
+            response.headers['X-Saved-Time'] = str(saved_time)
+            response.headers['X-Total-Saved-Time'] = str(total_saved_time)
             return response
         else:
             return jsonify({'error': '生成脚本失败'}), 500
@@ -112,4 +124,4 @@ def download_excel():
         as_attachment=True,
         download_name='data_example.xlsx',
         mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    ) 
+    )

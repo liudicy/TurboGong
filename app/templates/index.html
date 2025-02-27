@@ -3,6 +3,7 @@
 <head>
     <title>脚本生成工具</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confetti.css') }}"
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap">
 </head>
 <body>
@@ -10,6 +11,7 @@
         <header>
             <h1>脚本生成工具</h1>
             <p class="subtitle">简单高效的配置脚本生成工具</p>
+            <p class="total-saved-time">已累计为打工人节省 <span id="totalSavedTime">0</span> 秒</p>
         </header>
 
         <section class="description">
@@ -66,4 +68,4 @@
     
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
-</html> 
+</html>

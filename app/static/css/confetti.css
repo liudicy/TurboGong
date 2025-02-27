@@ -1,0 +1,53 @@
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: confetti-fall 4s linear forwards;
+}
+
+.confetti:nth-child(2n) {
+    background-color: #0f0;
+}
+
+.confetti:nth-child(3n) {
+    background-color: #00f;
+}
+
+.confetti:nth-child(4n) {
+    background-color: #ff0;
+}
+
+.confetti:nth-child(5n) {
+    background-color: #f0f;
+}
+
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.total-saved-time {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #666;
+}
