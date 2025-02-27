@@ -51,5 +51,21 @@ $RECYCLE.BIN/
 # Project specific
 *.spec
 *.log
-*.txt
-!requirements.txt 
+
+# Allow specific files
+!requirements.txt
+!app/uploads/data_example.xlsx
+!app/static/examples/*
+!app/templates/*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Generated files
+app/uploads/output/*
+!app/uploads/output/.gitkeep
+app/uploads/*.txt
+app/uploads/*.xlsx
+!app/uploads/data_example.xlsx
+app/uploads/time_stats.json

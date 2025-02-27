@@ -48,46 +48,21 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
         }
         
         // 获取总行数
-        const totalRows = parseInt(response.headers.get('X-Total-Rows') || '0');
-        let processedRows = 0;
+        const totalRows = response.headers.get('X-Total-Rows');
+        const savedTime = parseFloat(response.headers.get('X-Saved-Time'));
+        const totalSavedTime = parseFloat(response.headers.get('X-Total-Saved-Time'));
         
-        const reader = response.body.getReader();
-        const contentLength = +response.headers.get('Content-Length');
-        let receivedLength = 0;
+        // 更新累计节省时间显示
+        totalSavedTimeSpan.textContent = totalSavedTime.toFixed(1);
         
-        return new ReadableStream({
-            start(controller) {
-                function push() {
-                    reader.read().then(({done, value}) => {
-                        if (done) {
-                            controller.close();
-                            return;
-                        }
-                        
-                        receivedLength += value.length;
-                        const percentage = (receivedLength / contentLength * 100).toFixed(2);
-                        progress.style.width = percentage + '%';
-                        progress.textContent = percentage + '%';
-                        
-                        controller.enqueue(value);
-                        push();
-                    });
-                }
-                push();
-            }
-        });
-    })
-    .then(stream => new Response(stream))
-    .then(response => {
-        const savedTime = parseFloat(response.headers.get('X-Saved-Time') || '0');
-        const totalSavedTime = parseFloat(response.headers.get('X-Total-Saved-Time') || '0');
-        
-        // 更新总节省时间显示，确保数值有效
-        totalSavedTimeSpan.textContent = isNaN(totalSavedTime) ? '0.0' : totalSavedTime.toFixed(1);
-        
-        // 显示成功消息和礼花效果
+        // 显示成功消息和特效
+        showSuccessMessage(savedTime);
         createConfetti();
-        showSuccessMessage(isNaN(savedTime) ? 0 : savedTime);
+        
+        // 计算并显示本次处理时间
+        const endTime = performance.now();
+        const timeElapsed = ((endTime - startTime) / 1000).toFixed(2);
+        timeSpent.textContent = `本次处理用时：${timeElapsed} 秒`;
         
         return response.blob();
     })
