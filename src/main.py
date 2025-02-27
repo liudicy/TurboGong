@@ -1,90 +1,52 @@
 import sys
-from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, 
-                           QVBoxLayout, QLabel, QFileDialog, QWidget, QMessageBox)
-from PyQt6.QtCore import Qt
-from excel_processor import ExcelProcessor
+import os
+import platform
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("OLT配置脚本生成工具 By 刘迪")
-        self.setFixedSize(500, 200)
+def check_environment():
+    """检查运行环境"""
+    try:
+        import tkinter
+    except ImportError:
+        print("错误: 缺少 tkinter 模块")
+        print("\n请按照以下步骤安装：")
         
-        # 创建中心部件和布局
-        central_widget = QWidget()
-        self.setCentralWidget(central_widget)
-        layout = QVBoxLayout(central_widget)
+        system = platform.system()
+        if system == "Darwin":  # macOS
+            print("在 macOS 上运行以下命令：")
+            print("brew install python-tk@3.13")
+        elif system == "Linux":
+            print("在 Linux 上运行以下命令：")
+            print("sudo apt-get install python3-tk  # Ubuntu/Debian")
+            print("或")
+            print("sudo dnf install python3-tkinter  # Fedora")
+        elif system == "Windows":
+            print("在 Windows 上：")
+            print("1. 重新安装 Python，确保在安装时选中 'tcl/tk and IDLE'")
+            print("2. 或使用 pip 安装：pip install tk")
         
-        # 创建选择文件按钮
-        self.select_button = QPushButton("选择Excel文件")
-        self.select_button.clicked.connect(self.select_file)
-        self.select_button.setFixedWidth(200)
-        
-        # 文件路径标签
-        self.file_label = QLabel("未选择文件")
-        self.file_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.file_label.setWordWrap(True)
-        
-        # 处理按钮
-        self.process_button = QPushButton("开始处理")
-        self.process_button.clicked.connect(self.process_excel)
-        self.process_button.setFixedWidth(200)
-        
-        # 添加部件到布局
-        layout.addWidget(self.select_button, alignment=Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(self.file_label)
-        layout.addWidget(self.process_button, alignment=Qt.AlignmentFlag.AlignCenter)
-        
-        self.selected_file = None
-        
-    def select_file(self):
-        file_path, _ = QFileDialog.getOpenFileName(
-            self,
-            "选择Excel文件",
-            "",
-            "Excel Files (*.xlsx *.xls)"
-        )
-        if file_path:
-            self.selected_file = file_path
-            # 获取文件名，而不是完整路径
-            file_name = file_path.split('/')[-1]
-            self.file_label.setText(f"已选择: {file_name}")
-            
-    def process_excel(self):
-        if not self.selected_file:
-            QMessageBox.warning(self, "警告", "请先选择Excel文件！")
-            return
-            
-        try:
-            processor = ExcelProcessor(self.selected_file)
-            df = processor.read_excel()
-            result = processor.process_data(df)
-            
-            # 选择保存位置
-            save_path, _ = QFileDialog.getSaveFileName(
-                self,
-                "保存配置文件",
-                "config.txt",
-                "Text Files (*.txt)"
-            )
-            
-            if save_path:
-                with open(save_path, 'w', encoding='utf-8') as f:
-                    f.write(result)
-                QMessageBox.information(self, "成功", "配置文件生成成功！")
-        except Exception as e:
-            QMessageBox.critical(self, "错误", str(e))
+        sys.exit(1)
+
+# 添加项目根目录到 Python 路径
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
+
+from src.script_generator_ui import ScriptGeneratorUI
 
 def main():
-    app = QApplication(sys.argv)
-    
-    # 设置应用样式
-    app.setStyle('Fusion')
-    
-    window = MainWindow()
-    window.show()
-    
-    sys.exit(app.exec())
+    """主程序入口"""
+    try:
+        # 检查环境
+        check_environment()
+        
+        # 导入必要模块
+        from src.script_generator_ui import ScriptGeneratorUI
+        
+        # 运行程序
+        app = ScriptGeneratorUI()
+        app.run()
+    except Exception as e:
+        print(f"程序运行出错: {str(e)}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main() 
