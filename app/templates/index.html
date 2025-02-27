@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>脚本生成工具</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 脚本生成工具</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/confetti.css') }}"
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confetti.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>脚本生成工具</h1>
-            <p class="subtitle">简单高效的配置脚本生成工具</p>
-            <p class="total-saved-time">已累计为打工人节省 <span id="totalSavedTime">0</span> 秒</p>
+            <h1>🚀 脚本生成工具</h1>
+            <p class="subtitle">✨ 简单高效的配置脚本生成工具</p>
+            <p class="total-saved-time">⏱️ 已累计为打工人节省 <span id="totalSavedTime">0</span> 秒</p>
         </header>
 
         <section class="description">
@@ -19,15 +21,15 @@
             <div class="steps">
                 <div class="step">
                     <span class="step-number">1</span>
-                    <p>准备模板文件 (.txt格式)<br>使用{字段名}标注需要替换的变量</p>
+                    <p>📝 准备模板文件 (.txt格式)<br>使用{字段名}标注需要替换的变量</p>
                 </div>
                 <div class="step">
                     <span class="step-number">2</span>
-                    <p>准备Excel数据文件<br>表格列名需与模板中的字段名匹配</p>
+                    <p>📊 准备Excel数据文件<br>表格列名需与模板中的字段名匹配</p>
                 </div>
                 <div class="step">
                     <span class="step-number">3</span>
-                    <p>上传文件并生成<br>点击生成按钮后自动下载结果</p>
+                    <p>🎯 上传文件并生成<br>点击生成按钮后自动下载结果</p>
                 </div>
             </div>
         </section>
@@ -35,7 +37,7 @@
         <section class="upload-section">
             <form id="uploadForm">
                 <div class="form-group">
-                    <label>选择模板文件 (.txt)</label>
+                    <label>📄 选择模板文件 (.txt)</label>
                     <div class="input-group">
                         <input type="file" name="template" accept=".txt" required>
                         <a href="{{ url_for('main.download_template') }}" class="example-link">下载示例模板</a>
@@ -43,14 +45,14 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>选择数据文件 (.xlsx, .xls)</label>
+                    <label>📊 选择数据文件 (.xlsx, .xls)</label>
                     <div class="input-group">
                         <input type="file" name="data" accept=".xlsx,.xls" required>
                         <a href="{{ url_for('main.download_excel') }}" class="example-link">下载示例表格</a>
                     </div>
                 </div>
                 
-                <button type="submit">生成脚本</button>
+                <button type="submit">🚀 生成脚本</button>
             </form>
         </section>
         

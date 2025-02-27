@@ -3,11 +3,9 @@ import os
 from werkzeug.utils import secure_filename
 from app.services.template_validator import TemplateValidator
 from app.services.script_generator import ScriptGenerator
+from app.services.time_tracker import TimeTracker
 from datetime import datetime, timedelta
 import pandas as pd
-
-# 用于存储总节省时间的变量
-total_saved_time = 0
 
 main = Blueprint('main', __name__)
 
@@ -40,15 +38,15 @@ def index():
 @main.route('/upload', methods=['POST'])
 def upload_files():
     if 'template' not in request.files or 'data' not in request.files:
-        return jsonify({'error': '请选择模板文件和数据文件'}), 400
+        return jsonify({'error': '请上传模板文件(.txt)和数据文件(.xlsx/.xls)'}), 400
         
     template_file = request.files['template']
     data_file = request.files['data']
     
     if not allowed_file(template_file.filename, 'template'):
-        return jsonify({'error': '模板文件必须是.txt格式'}), 400
+        return jsonify({'error': '模板文件格式错误：请上传.txt格式的文本文件，并确保文件使用UTF-8编码'}), 400
     if not allowed_file(data_file.filename, 'data'):
-        return jsonify({'error': '数据文件必须是.xlsx或.xls格式'}), 400
+        return jsonify({'error': '数据文件格式错误：请上传.xlsx或.xls格式的Excel文件'}), 400
     
     try:
         # 保存上传的文件
@@ -62,13 +60,24 @@ def upload_files():
         
         # 验证模板和数据
         validator = TemplateValidator()
-        if not validator.load_template(template_path):
-            return jsonify({'error': '模板文件格式错误'}), 400
-            
-        is_valid, missing_fields = validator.validate_excel(data_path)
+        is_valid, error_msg = validator.load_template(template_path)
         if not is_valid:
+            return jsonify({'error': f'模板文件格式错误：{error_msg}\n请确保模板文件中使用{{字段名}}格式标记变量'}), 400
+            
+        is_valid, missing_fields, errors = validator.validate_excel(data_path)
+        if not is_valid:
+            error_messages = []
+            for error in errors:
+                if '缺少以下字段' in error:
+                    error_messages.append(f'数据文件字段缺失：{error}\n请确保Excel表格中的列名与模板中的变量名完全匹配')
+                elif '未使用的字段' in error:
+                    error_messages.append(f'数据文件包含多余字段：{error}\n这些字段不会影响脚本生成，但建议删除以保持数据整洁')
+                elif '存在空值' in error:
+                    error_messages.append(f'数据完整性问题：{error}\n请确保所有必填字段都有值')
+                else:
+                    error_messages.append(f'数据文件错误：{error}')
             return jsonify({
-                'error': f'Excel文件缺少以下字段：{", ".join(missing_fields)}'
+                'error': '\n'.join(error_messages)
             }), 400
         
         # 生成脚本
@@ -89,12 +98,11 @@ def upload_files():
                 download_name='generated_scripts.txt',
                 mimetype='text/plain'
             )
-            # 计算节省时间（每行0.5秒）
-            saved_time = total_rows * 0.5
             
-            # 更新总节省时间
-            global total_saved_time
-            total_saved_time += saved_time
+            # 使用TimeTracker更新节省时间
+            time_tracker = TimeTracker(current_app)
+            saved_time = time_tracker.add_saved_time(total_rows)
+            total_saved_time = time_tracker.get_total_saved_time()
             
             # 添加额外的响应头
             response.headers['Content-Type'] = 'text/plain; charset=utf-8'
@@ -103,10 +111,18 @@ def upload_files():
             response.headers['X-Total-Saved-Time'] = str(total_saved_time)
             return response
         else:
-            return jsonify({'error': '生成脚本失败'}), 500
+            return jsonify({'error': '生成脚本失败，请检查上传的文件是否正确'}), 500
             
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        error_msg = str(e)
+        if '脚本生成器内部错误' in error_msg:
+            return jsonify({'error': '系统内部错误，请联系管理员修复。'}), 500
+        elif '数据文件格式错误' in error_msg:
+            return jsonify({'error': error_msg}), 400
+        elif '生成脚本时发现以下问题' in error_msg:
+            return jsonify({'error': '数据处理错误：' + error_msg.replace('生成脚本失败：生成脚本时发现以下问题：', '')}), 400
+        else:
+            return jsonify({'error': f'处理文件时出错，请检查上传的文件格式是否正确'}), 500
 
 @main.route('/download_template')
 def download_template():

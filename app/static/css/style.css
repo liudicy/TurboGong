@@ -17,6 +17,8 @@ body {
     max-width: 980px;
     margin: 0 auto;
     padding: 40px 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 header {
@@ -25,10 +27,11 @@ header {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 48px);
     font-weight: 600;
     margin: 0;
     letter-spacing: -0.003em;
+    line-height: 1.2;
 }
 
 .subtitle {
@@ -52,6 +55,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .step {
@@ -60,6 +64,7 @@ h2 {
     padding: 20px;
     background: var(--apple-light-gray);
     border-radius: 18px;
+    min-width: 280px;
 }
 
 .step-number {
@@ -88,14 +93,65 @@ h2 {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        margin-bottom: 40px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .steps {
+        gap: 20px;
+    }
+
+    .step {
+        flex: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .example-link {
+        text-align: center;
+    }
+
+    button {
+        margin: 30px auto;
+        width: 100%;
+    }
 }
 
 input[type="file"] {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #d2d2d7;
+    padding: 12px;
+    border: 2px dashed var(--apple-blue);
     border-radius: 12px;
     font-size: 15px;
+    background: var(--apple-light-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #0077ed;
+    background: #f0f0f2;
 }
 
 .example-link {
@@ -183,4 +239,4 @@ button:hover {
     font-size: 14px;
     color: var(--apple-gray);
     margin-top: 10px;
-} 
+}

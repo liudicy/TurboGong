@@ -15,7 +15,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
             confetti.style.left = Math.random() * 100 + 'vw';
             confetti.style.animationDelay = Math.random() * 2 + 's';
             document.body.appendChild(confetti);
-            setTimeout(() => confetti.remove(), 4000);
+            setTimeout(() => confetti.remove(), 3000);
         }
     }
 
@@ -94,7 +94,9 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
     .then(blob => {
         const endTime = performance.now();
         const timeElapsed = endTime - startTime;
-        timeSpent.textContent = `生成完成，耗时: ${timeElapsed.toFixed(2)}ms`;
+        // 隐藏进度条和加载动画
+        status.style.display = 'none';
+        timeSpent.textContent = `生成完成，耗时: ${(timeElapsed/1000).toFixed(2)}秒`;
         
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
