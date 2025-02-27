@@ -1,0 +1,8 @@
+configure terminal 
+interface gpon-olt_1/{槽位}/{端口}
+  onu {ONU编号} type ZTEG-F660 sn {PONSN}  
+!
+configure terminal 
+interface gpon-onu_1/{槽位}/{端口}:{ONU编号}
+  service-port 1 vport 1 user-vlan {UserVLAN} vlan {内层VLAN} svlan {外层VLAN}
+! 
