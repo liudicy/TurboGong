@@ -25,10 +25,12 @@ cd TurboGong
 2. 创建并激活虚拟环境：
 ```bash
 # 创建虚拟环境
-python -m venv venv
+python3 -m venv venv
 
 # Linux/macOS 激活虚拟环境
-source venv/bin/activate
+. venv/bin/activate
+# 或者
+source ./venv/bin/activate
 
 # Windows 激活虚拟环境
 .\venv\Scripts\activate
