@@ -69,3 +69,6 @@ app/uploads/*.txt
 app/uploads/*.xlsx
 !app/uploads/data_example.xlsx
 app/uploads/time_stats.json
+
+# Configuration files
+app/config.py

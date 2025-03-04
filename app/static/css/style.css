@@ -40,6 +40,20 @@ h1 {
     margin-top: 10px;
 }
 
+.github-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: var(--apple-blue);
+}
+
 .description {
     margin-bottom: 60px;
 }
@@ -239,4 +253,18 @@ button:hover {
     font-size: 14px;
     color: var(--apple-gray);
     margin-top: 10px;
+}
+
+.visit-stats {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--apple-gray);
+}
+
+.visit-stats span {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--apple-light-gray);
+    border-radius: 20px;
 }

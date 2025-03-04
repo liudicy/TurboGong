@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 脚本生成工具</title>
+    <title>🚀 脚本生成器</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/confetti.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🚀 脚本生成工具</h1>
+            <h1>🚀 脚本生成器</h1>
             <p class="subtitle">✨ 简单高效的配置脚本生成工具</p>
             <p class="total-saved-time">⏱️ 已累计为打工人节省 <span id="totalSavedTime">0</span> 秒</p>
+            <a href="https://github.com/liudicy/TurboGong" class="github-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
         </header>
 
         <section class="description">
@@ -69,5 +73,11 @@
     </div>
     
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3LRhqGT2vJuH0TAP",ck:"3LRhqGT2vJuH0TAP"})</script>
+    <script src="{{ url_for('static', filename='js/la-stats.js') }}"></script>
+    <div class="visit-stats">
+        <span>👀 总访问量 <span id="LA_visit_count"></span> 次</span>
+    </div>
 </body>
 </html>
