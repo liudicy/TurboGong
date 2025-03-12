@@ -33,7 +33,8 @@ def cleanup_old_files(directory, max_age_hours=1):
 
 @main.route('/')
 def index():
-    return render_template('index.html')
+    now = datetime.now()
+    return render_template('index.html', now=now)
 
 @main.route('/upload', methods=['POST'])
 def upload_files():

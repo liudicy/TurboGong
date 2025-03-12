@@ -14,7 +14,6 @@
         <header>
             <h1>🚀 脚本生成器</h1>
             <p class="subtitle">✨ 简单高效的配置脚本生成工具</p>
-            <p class="total-saved-time">⏱️ 已累计为打工人节省 <span id="totalSavedTime">0</span> 秒</p>
             <a href="https://github.com/liudicy/TurboGong" class="github-link" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
             </a>
@@ -70,14 +69,17 @@
         </div>
         
         <div id="error" class="error-section" style="display: none;"></div>
+        
+        <footer>
+            <p class="copyright">© {{ now.year }} TurboGong - 让配置更简单</p>
+            <div class="visit-widget">
+                <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3LRhqGT2vJuH0TAP/quote.js?theme=0&f=12"></script>
+            </div>
+        </footer>
     </div>
     
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3LRhqGT2vJuH0TAP",ck:"3LRhqGT2vJuH0TAP"})</script>
-    <script src="{{ url_for('static', filename='js/la-stats.js') }}"></script>
-    <div class="visit-stats">
-        <span>👀 总访问量 <span id="LA_visit_count"></span> 次</span>
-    </div>
 </body>
 </html>

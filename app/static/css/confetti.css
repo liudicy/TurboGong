@@ -9,27 +9,39 @@
 
 .confetti {
     position: fixed;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #f00;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    animation: confetti-fall 3s linear forwards;
+    animation: confetti-fall 4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    z-index: 1000;
+    opacity: 0.8;
 }
 
 .confetti:nth-child(2n) {
-    background-color: #0f0;
+    background-color: #0071e3;
+    width: 8px;
+    height: 8px;
+    animation-duration: 3.5s;
 }
 
 .confetti:nth-child(3n) {
-    background-color: #00f;
+    background-color: #34c759;
+    width: 10px;
+    height: 10px;
+    animation-duration: 3s;
 }
 
 .confetti:nth-child(4n) {
-    background-color: #ff0;
+    background-color: #ff9500;
+    clip-path: circle(50% at 50% 50%);
+    animation-duration: 4.5s;
 }
 
 .confetti:nth-child(5n) {
-    background-color: #f0f;
+    background-color: #5e5ce6;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation-duration: 5s;
 }
 
 .success-message {
@@ -38,16 +50,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    z-index: 1000;
+    z-index: 1001;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    color: #1d1d1f;
+    max-width: 90%;
+    animation: message-appear 0.5s ease-out forwards;
 }
 
-.total-saved-time {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 1.2em;
-    color: #666;
+@keyframes message-appear {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
