@@ -71,6 +71,26 @@ jobs:
               pip install -r requirements.txt
             fi
             
+            # 确保uploads目录及其子目录存在并具有正确的权限
+            echo "检查uploads目录权限..."
+            UPLOADS_DIR="/var/www/TurboGong/app/uploads"
+            OUTPUT_DIR="$UPLOADS_DIR/output"
+            
+            # 创建目录（如果不存在）
+            if [ "$IS_ROOT" = true ]; then
+              mkdir -p $UPLOADS_DIR $OUTPUT_DIR
+              # 设置www-data用户为目录所有者，确保web服务器有权限写入
+              chown -R www-data:www-data $UPLOADS_DIR
+              # 设置适当的权限
+              chmod -R 755 $UPLOADS_DIR
+              chmod -R 775 $OUTPUT_DIR
+            else
+              sudo mkdir -p $UPLOADS_DIR $OUTPUT_DIR
+              sudo chown -R www-data:www-data $UPLOADS_DIR
+              sudo chmod -R 755 $UPLOADS_DIR
+              sudo chmod -R 775 $OUTPUT_DIR
+            fi
+            
             # 确保日志目录存在
             if [ "$IS_ROOT" = true ]; then
               mkdir -p /var/log/turbogong
