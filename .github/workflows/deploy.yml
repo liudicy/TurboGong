@@ -27,8 +27,47 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
+          # 创建项目目录（如果不存在）
+          sudo mkdir -p /var/www/TurboGong
+          sudo chown -R $USER:$USER /var/www/TurboGong
+          
+          # 如果目录为空，克隆仓库；否则拉取更新
+          if [ ! -d "/var/www/TurboGong/.git" ]; then
+            git clone https://github.com/yourusername/TurboGong.git /var/www/TurboGong
+          fi
+          
           cd /var/www/TurboGong
           git pull
+          
+          # 创建并激活虚拟环境
+          if [ ! -d "venv" ]; then
+            python3 -m venv venv
+          fi
           source venv/bin/activate
+          
+          # 安装依赖
+          python3 -m pip install --upgrade pip
           pip install -r requirements.txt
+          
+          # 配置 supervisor
+          if [ ! -f "/etc/supervisor/conf.d/turbogong.conf" ]; then
+            sudo bash -c 'cat > /etc/supervisor/conf.d/turbogong.conf << EOL
+[program:turbogong]
+directory=/var/www/TurboGong
+command=/var/www/TurboGong/venv/bin/gunicorn -w 4 -b 127.0.0.1:8000 run:app
+user=www-data
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/turbogong/err.log
+stdout_logfile=/var/log/turbogong/out.log
+EOL'
+            
+            # 创建日志目录
+            sudo mkdir -p /var/log/turbogong
+            sudo chown -R www-data:www-data /var/log/turbogong
+          fi
+          
+          # 重新加载 supervisor 配置
+          sudo supervisorctl reread
+          sudo supervisorctl update
           sudo supervisorctl restart turbogong
