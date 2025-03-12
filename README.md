@@ -156,10 +156,17 @@ TurboGong/
 │   ├── routes.py        # 路由处理
 │   ├── services/        # 业务逻辑目录
 │   │   ├── template_validator.py  # 模板验证
-│   │   └── script_generator.py    # 脚本生成
+│   │   ├── script_generator.py    # 脚本生成
+│   │   └── time_tracker.py        # 时间统计
 │   ├── static/          # 静态资源
-│   └── templates/       # HTML模板
-└── uploads/             # 上传文件目录
+│   │   ├── css/        # 样式文件
+│   │   ├── js/         # JavaScript文件
+│   │   └── examples/   # 示例文件
+│   ├── templates/       # HTML模板
+│   └── uploads/         # 上传文件目录
+│       ├── data_example.xlsx    # 示例数据文件
+│       ├── template_example.txt # 示例模板文件
+│       └── output/              # 生成的脚本输出目录
 ```
 
 ## 注意事项

@@ -57,6 +57,7 @@ $RECYCLE.BIN/
 !app/uploads/data_example.xlsx
 !app/static/examples/*
 !app/templates/*
+!app/static/css/*
 
 # Temporary files
 *.tmp
